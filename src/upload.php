@@ -5,16 +5,22 @@
  * Date: 21-11-2014
  * Time: 23:07
  */
-include('read_configuration.php');
-$conf = get_parse_ini();    //Receives the configuration array
+require_once('./read_configuration.php');
+require_once('./mvm.images.php');
 
-$ds = DIRECTORY_SEPARATOR;  //1
+$conf = parse_ini();    //Receives the configuration array
 
-$storeFolder = $conf['file']['images_path'];   //2
+$ds = DIRECTORY_SEPARATOR;
+
+$storeFolder = $conf['file']['images_path'];   //Folder to store the image
 
 if (!empty($_FILES)) {
-    $tempFile = $_FILES['file']['tmp_name'];          //3
-    $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;  //4
-    $targetFile =  $targetPath. $_FILES['file']['name'];  //5
-    move_uploaded_file($tempFile,$targetFile); //6
+    $tempFile = $_FILES['file']['tmp_name'];
+    $targetPath = dirname( __FILE__ ) . $ds. $storeFolder . $ds;
+    $targetFile =  $targetPath. $_FILES['file']['name'];
+    move_uploaded_file($tempFile,$targetFile);
+
+    $url = $storeFolder . '/' . $_FILES['file']['name'];
+    log_notice('URL to store: ' . $url);
+    store_image($url);
 }

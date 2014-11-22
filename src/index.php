@@ -1,3 +1,10 @@
+<?php
+/**
+ * Default view
+ */
+require_once('./mvm.images.php');
+require_once('./logger/log.configurator.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +36,7 @@
                   id="my-awesome-dropzone"
                   method="post"></form>
         </div>
-
+        
     </div>
 <!-- Libs -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

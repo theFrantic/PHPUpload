@@ -11,9 +11,9 @@
  *
  * @return array|bool
  */
-function get_parse_ini()
+function parse_ini()
 {
-    $file = 'configuration.ini';
+    $file = $_SERVER['DOCUMENT_ROOT'] . 'configuration.ini';
     // if cannot open file, return false
     if (!is_file($file))
         return false;
