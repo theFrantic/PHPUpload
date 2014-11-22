@@ -10,7 +10,7 @@ $conf = get_parse_ini();    //Receives the configuration array
 
 $ds = DIRECTORY_SEPARATOR;  //1
 
-$storeFolder = $conf['file_process']['images_path'];   //2
+$storeFolder = $conf['file']['images_path'];   //2
 
 if (!empty($_FILES)) {
     $tempFile = $_FILES['file']['tmp_name'];          //3

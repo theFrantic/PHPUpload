@@ -8,7 +8,7 @@
 
 /**
  * Returns a configuration array
- * @param $file
+ *
  * @return array|bool
  */
 function get_parse_ini()
