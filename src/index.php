@@ -31,12 +31,12 @@ require_once('./logger/log.configurator.php');
     <div id="actions" class="row">
 
         <div class="col-lg-7">
-            <form action="upload.php"
+            <form action="action.upload.php"
                   class="dropzone"
                   id="my-awesome-dropzone"
                   method="post"></form>
         </div>
-        
+
     </div>
 <!-- Libs -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

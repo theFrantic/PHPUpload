@@ -30,6 +30,7 @@ function list_images(){
     $stmt = get_images();
     while($row = $stmt->fetch()){
         log_notice("Storing on array image: " . $row['url']);
-        echo $row['url'] . "<br />";
+        //echo $row['url'] . "<br />";
+        echo "<img src='" . $row['url'] . "' data-id='" . $row['id'] . "' />\r\n";
     }
 }
