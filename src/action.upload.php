@@ -6,6 +6,7 @@
  * Time: 23:07
  */
 require_once('./read_configuration.php');
+require_once('./logger/log.configurator.php');
 require_once('./mvm.images.php');
 
 $conf = parse_ini();    //Receives the configuration array

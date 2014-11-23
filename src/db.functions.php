@@ -90,3 +90,28 @@ function get_images(){
     }
     return -1;
 }
+
+function update_image($id, $position){
+    $update = '';
+    try {
+        $con = connect_db();
+        $update = "update images set position = :position where id = :id";
+
+        $stm = $con->prepare($update);
+        $stm->bindParam(':position', $position, PDO::PARAM_INT);
+        $stm->bindParam(':id', $imagePath, PDO::PARAM_INT);
+
+        $done = $stm->execute();
+        if($done){
+            log_notice('Image succesfully updated on db');
+        }
+        else{
+            log_error("Image wasn't updated on db. Update used: " . $update );
+        }
+        return $done;
+    }
+    catch(PDOException $e){
+        log_fatal('Error on db.configurator->update_image() - ' . $e->getMessage());
+        die($e->getMessage());
+    }
+}

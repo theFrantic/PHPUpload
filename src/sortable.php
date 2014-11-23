@@ -16,6 +16,8 @@ require_once('./logger/log.configurator.php');
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,14 +51,15 @@ require_once('./logger/log.configurator.php');
         <div class="col-xs-12">
             <!-- Bootstrap 3 panel list. -->
             <ul id="draggablePanelList" class="list-unstyled">
-                <li class="panel panel-info">
+                <!--<li class="panel panel-info">
                     <div class="panel-heading">You can drag this panel.</div>
                     <div class="panel-body">Content ...</div>
                 </li>
                 <li class="panel panel-info">
                     <div class="panel-heading">You can drag this panel too.</div>
                     <div class="panel-body">Content ...</div>
-                </li>
+                </li>-->
+                <?php echo list_images(); ?>
             </ul>
         </div>
     </div>

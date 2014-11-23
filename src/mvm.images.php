@@ -28,9 +28,24 @@ function store_image($url){
 
 function list_images(){
     $stmt = get_images();
+
+    $html = "";
     while($row = $stmt->fetch()){
         log_notice("Storing on array image: " . $row['url']);
         //echo $row['url'] . "<br />";
-        echo "<img src='" . $row['url'] . "' data-id='" . $row['id'] . "' />\r\n";
+
+        $html .= "<li class='panel panel-info' data-id='" . $row['id'] . "'>\r\n";      //IMPORTANT! this is the element that we'll be using on javascript to read  the db id
+        // Header
+        $html .= "<div class='panel-heading'>\r\n";
+        $html .= "<i class='fa fa-unsorted fa-border'></i> Drag and drop to sort\r\n";
+        $html .= "</div>\r\n";
+        // Body
+        $html .= "<div class='panel-body'>\r\n";
+        $html .= "<img src='" . $row['url'] . "' data-id='" . $row['id'] . "' class='image-circle' width='60' height='60' />\r\n";
+        $html .= "</div>\r\n";
+
+        $html .= "</li>\r\n";
     }
+
+    return $html;
 }
