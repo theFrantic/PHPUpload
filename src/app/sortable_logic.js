@@ -40,3 +40,11 @@ jQuery(function($) {
         }
     });
 });
+
+/**
+ * Function to delete an image on server
+ */
+function clickToDelete(elem){
+    var id = $(elem).data("id");
+    alert("on ClickToDelete()");
+}

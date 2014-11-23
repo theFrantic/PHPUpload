@@ -41,7 +41,8 @@ function list_images(){
         $html .= "</div>\r\n";
         // Body
         $html .= "<div class='panel-body'>\r\n";
-        $html .= "<img src='" . $row['url'] . "' data-id='" . $row['id'] . "' class='image-circle' width='60' height='60' />\r\n";
+        $html .= "<img src='" . $row['url'] . "' data-id='" . $row['id'] . "' class='image-circle' width='60' height='60' /> \r\n";
+        $html .= "<button type='button' class='btn btn-danger' onclick='clickToDelete(this)' data-id='" . $row['id'] . "'><i class='fa fa-trash-o'></i></button>\r\n";
         $html .= "</div>\r\n";
 
         $html .= "</li>\r\n";

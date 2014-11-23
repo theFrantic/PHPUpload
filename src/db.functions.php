@@ -91,6 +91,11 @@ function get_images(){
     return -1;
 }
 
+/**
+ * Function to update the image index
+ * @param $id
+ * @param $position
+ */
 function update_image($id, $position){
     $update = '';
     try {

@@ -48,7 +48,7 @@ require_once('./logger/log.configurator.php');
     </div>
 
     <div id="row-3rd" class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-4">
             <!-- Bootstrap 3 panel list. -->
             <ul id="draggablePanelList" class="list-unstyled">
                 <?php echo list_images(); ?>
