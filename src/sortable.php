@@ -51,14 +51,6 @@ require_once('./logger/log.configurator.php');
         <div class="col-xs-12">
             <!-- Bootstrap 3 panel list. -->
             <ul id="draggablePanelList" class="list-unstyled">
-                <!--<li class="panel panel-info">
-                    <div class="panel-heading">You can drag this panel.</div>
-                    <div class="panel-body">Content ...</div>
-                </li>
-                <li class="panel panel-info">
-                    <div class="panel-heading">You can drag this panel too.</div>
-                    <div class="panel-body">Content ...</div>
-                </li>-->
                 <?php echo list_images(); ?>
             </ul>
         </div>
